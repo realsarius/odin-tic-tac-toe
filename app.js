@@ -1,5 +1,10 @@
-const factory = () => {
-  const gameBoard = {
-    board: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+const Gameboard = (() => {
+  const cells = document.querySelectorAll('.cell');
+  const handleClick = (e) => {
+    console.log(e.target);
   };
-};
+
+  cells.forEach((cell) => {
+    cell.addEventListener('click', handleClick, { once: true });
+  });
+})();
