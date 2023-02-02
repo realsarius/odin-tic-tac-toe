@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <h1>Tic Tac Toe</h1>
-      <p>X starts first</p>
+      <p id="start">X starts first</p>
       <div class="board" id="board">
         <div class="cell" data-place="0"></div>
         <div class="cell" data-place="1"></div>
@@ -22,6 +22,15 @@
         <div class="cell" data-place="6"></div>
         <div class="cell" data-place="7"></div>
         <div class="cell" data-place="8"></div>
+      </div>
+      <div id="inputInterface">
+        <input
+          type="text"
+          name="playerName"
+          id="playerName"
+          placeholder="Enter your name..."
+        />
+        <button id="playerNameBtn">Enter</button>
       </div>
       <div id="gameOverModal">
         <h1 id="winnerName">Hello</h1>

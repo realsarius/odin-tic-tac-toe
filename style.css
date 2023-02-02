@@ -258,3 +258,41 @@ table {
 #gameOverModal button:hover {
   background-color: rgb(255, 180, 153);
 }
+
+#inputInterface {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#inputInterface input {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 5px solid black;
+}
+
+#inputInterface button {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  background-color: coral;
+  border: 3px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+}
+
+#inputInterface button:hover {
+  background-color: rgb(255, 180, 153);
+}

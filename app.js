@@ -4,9 +4,23 @@ const Gameboard = (() => {
   const gameOverModal = document.querySelector('#gameOverModal');
   const resetBtn = document.querySelector('#resetBtn');
   const winnerName = document.querySelector('#winnerName');
+  const inputInterface = document.querySelector('#inputInterface');
+  const playerNameBtn = document.querySelector('#playerNameBtn');
+  const playerNameInput = document.querySelector('#playerName');
+  const start = document.querySelector('#start');
 
   let turn = true;
   let checkDraw = 0;
+  let playerName = '';
+
+  (() => {
+    inputInterface.style.display = 'flex';
+    playerNameBtn.addEventListener('click', () => {
+      start.textContent = `${playerNameInput.value} starts first`;
+      playerName = playerNameInput.value;
+      inputInterface.style.display = 'none';
+    });
+  })();
 
   const switchTurn = () => {
     turn = !turn;
@@ -18,57 +32,97 @@ const Gameboard = (() => {
       (gameboard[0] === 'x' && gameboard[1] === 'x' && gameboard[2] === 'x') ||
       (gameboard[0] === 'o' && gameboard[1] === 'o' && gameboard[2] === 'o')
     ) {
-      winnerName.textContent = `${gameboard[0].toUpperCase()} Wins`;
-      gameOverModal.style.display = 'flex';
+      if (gameboard[0] === 'x') {
+        winnerName.textContent = `${playerName} Wins`;
+        gameOverModal.style.display = 'flex';
+      } else {
+        winnerName.textContent = `${playerName} Loses`;
+        gameOverModal.style.display = 'flex';
+      }
     }
     if (
       (gameboard[3] === 'x' && gameboard[4] === 'x' && gameboard[5] === 'x') ||
       (gameboard[3] === 'o' && gameboard[4] === 'o' && gameboard[5] === 'o')
     ) {
-      winnerName.textContent = `${gameboard[3].toUpperCase()} Wins`;
-      gameOverModal.style.display = 'flex';
+      if (gameboard[3] === 'x') {
+        winnerName.textContent = `${playerName} Wins`;
+        gameOverModal.style.display = 'flex';
+      } else {
+        winnerName.textContent = `${playerName} Loses`;
+        gameOverModal.style.display = 'flex';
+      }
     }
     if (
       (gameboard[6] === 'x' && gameboard[7] === 'x' && gameboard[8] === 'x') ||
       (gameboard[6] === 'o' && gameboard[7] === 'o' && gameboard[8] === 'o')
     ) {
-      winnerName.textContent = `${gameboard[6].toUpperCase()} Wins`;
-      gameOverModal.style.display = 'flex';
+      if (gameboard[6] === 'x') {
+        winnerName.textContent = `${playerName} Wins`;
+        gameOverModal.style.display = 'flex';
+      } else {
+        winnerName.textContent = `${playerName} Loses`;
+        gameOverModal.style.display = 'flex';
+      }
     }
     if (
       (gameboard[0] === 'x' && gameboard[3] === 'x' && gameboard[6] === 'x') ||
       (gameboard[0] === 'o' && gameboard[3] === 'o' && gameboard[6] === 'o')
     ) {
-      winnerName.textContent = `${gameboard[0].toUpperCase()} Wins`;
-      gameOverModal.style.display = 'flex';
+      if (gameboard[0] === 'x') {
+        winnerName.textContent = `${playerName} Wins`;
+        gameOverModal.style.display = 'flex';
+      } else {
+        winnerName.textContent = `${playerName} Loses`;
+        gameOverModal.style.display = 'flex';
+      }
     }
     if (
       (gameboard[1] === 'x' && gameboard[4] === 'x' && gameboard[7] === 'x') ||
       (gameboard[1] === 'o' && gameboard[4] === 'o' && gameboard[7] === 'o')
     ) {
-      winnerName.textContent = `${gameboard[1].toUpperCase()} Wins`;
-      gameOverModal.style.display = 'flex';
+      if (gameboard[1] === 'x') {
+        winnerName.textContent = `${playerName} Wins`;
+        gameOverModal.style.display = 'flex';
+      } else {
+        winnerName.textContent = `${playerName} Loses`;
+        gameOverModal.style.display = 'flex';
+      }
     }
     if (
       (gameboard[2] === 'x' && gameboard[5] === 'x' && gameboard[8] === 'x') ||
       (gameboard[2] === 'o' && gameboard[5] === 'o' && gameboard[8] === 'o')
     ) {
-      winnerName.textContent = `${gameboard[2].toUpperCase()} Wins`;
-      gameOverModal.style.display = 'flex';
+      if (gameboard[2] === 'x') {
+        winnerName.textContent = `${playerName} Wins`;
+        gameOverModal.style.display = 'flex';
+      } else {
+        winnerName.textContent = `${playerName} Loses`;
+        gameOverModal.style.display = 'flex';
+      }
     }
     if (
       (gameboard[0] === 'x' && gameboard[4] === 'x' && gameboard[8] === 'x') ||
       (gameboard[0] === 'o' && gameboard[4] === 'o' && gameboard[8] === 'o')
     ) {
-      winnerName.textContent = `${gameboard[0].toUpperCase()} Wins`;
-      gameOverModal.style.display = 'flex';
+      if (gameboard[0] === 'x') {
+        winnerName.textContent = `${playerName} Wins`;
+        gameOverModal.style.display = 'flex';
+      } else {
+        winnerName.textContent = `${playerName} Loses`;
+        gameOverModal.style.display = 'flex';
+      }
     }
     if (
       (gameboard[2] === 'x' && gameboard[4] === 'x' && gameboard[6] === 'x') ||
       (gameboard[2] === 'o' && gameboard[4] === 'o' && gameboard[6] === 'o')
     ) {
-      winnerName.textContent = `${gameboard[2].toUpperCase()} Wins`;
-      gameOverModal.style.display = 'flex';
+      if (gameboard[2] === 'x') {
+        winnerName.textContent = `${playerName} Wins`;
+        gameOverModal.style.display = 'flex';
+      } else {
+        winnerName.textContent = `${playerName} Loses`;
+        gameOverModal.style.display = 'flex';
+      }
     }
     if (checkDraw === 9) {
       winnerName.textContent = `Draw`;
